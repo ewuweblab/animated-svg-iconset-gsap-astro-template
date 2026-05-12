@@ -5,7 +5,7 @@
 * CSS Animations are lightweight and easy to implement and improve user experience
 * Learn CSS tranforms, transitions, and keyframes
 * Add existing animation libraries to your project and save time
-* Use SVG icons in your future projects
+* Use SVG icons in your future projects and imporve UX microinteractions
 
 ## How?
 * Use GSAP aka GreenSock Animation library to apply CSS animations
