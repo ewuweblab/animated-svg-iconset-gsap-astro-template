@@ -30,4 +30,25 @@ class="lucide lucide-square-icon lucide-square">
         duration: 0.6,
         ease: 'back.out(1.7)'
     });
+
+    // Hover animations
+    const square = document.querySelector('#theSquare');
+
+    square.addEventListener('mouseenter', () => {
+        gsap.to('#theSquare rect', {
+            scale: 1.2,
+            transformOrigin: 'center',
+            duration: 0.3,
+            ease: 'power2.out'
+        });
+    });
+
+    square.addEventListener('mouseleave', () => {
+        gsap.to('#theSquare rect', {
+            scale: 1,
+            transformOrigin: 'center',
+            duration: 0.3,
+            ease: 'power2.in'
+        });
+    });
 </script>

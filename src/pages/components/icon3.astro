@@ -30,4 +30,23 @@ class="lucide lucide-triangle-icon lucide-triangle">
         duration: 0.7,
         ease: 'power3.out'
     });
+
+    // Hover animations
+    const triangle = document.querySelector('#theTriangle');
+
+    triangle.addEventListener('mouseenter', () => {
+        gsap.to('#theTriangle path', {
+            y: -4,
+            duration: 0.3,
+            ease: 'power2.out'
+        });
+    });
+
+    triangle.addEventListener('mouseleave', () => {
+        gsap.to('#theTriangle path', {
+            y: 0,
+            duration: 0.3,
+            ease: 'power2.in'
+        });
+    });
 </script>

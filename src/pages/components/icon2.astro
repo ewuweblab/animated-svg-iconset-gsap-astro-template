@@ -13,13 +13,33 @@ xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fi
 </svg>
 
 <!-- GSAP Scripting -->
- <script>
+<script>
     // import GSAP
     import gsap from 'gsap';
-        
+
     // animate it
-    gsap.from( '#theCircle circle', {
+    gsap.from('#theCircle circle', {
         x: -200
     });
 
- </script>
+    // Hover animations
+    const circle = document.querySelector('#theCircle');
+
+    circle.addEventListener('mouseenter', () => {
+        gsap.to('#theCircle circle', {
+            scale: 1.2,
+            transformOrigin: 'center',
+            duration: 0.3,
+            ease: 'power2.out'
+        });
+    });
+
+    circle.addEventListener('mouseleave', () => {
+        gsap.to('#theCircle circle', {
+            scale: 1,
+            transformOrigin: 'center',
+            duration: 0.3,
+            ease: 'power2.in'
+        });
+    });
+</script>

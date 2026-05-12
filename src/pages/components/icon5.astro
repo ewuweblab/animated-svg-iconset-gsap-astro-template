@@ -31,4 +31,25 @@ class="lucide lucide-hexagon-icon lucide-hexagon">
         duration: 0.7,
         ease: 'elastic.out(1, 0.5)'
     });
+
+    // Hover animations
+    const hexagon = document.querySelector('#theHexagon');
+
+    hexagon.addEventListener('mouseenter', () => {
+        gsap.to('#theHexagon path', {
+            rotation: 30,
+            transformOrigin: 'center',
+            duration: 0.4,
+            ease: 'power2.out'
+        });
+    });
+
+    hexagon.addEventListener('mouseleave', () => {
+        gsap.to('#theHexagon path', {
+            rotation: 0,
+            transformOrigin: 'center',
+            duration: 0.4,
+            ease: 'power2.in'
+        });
+    });
 </script>
