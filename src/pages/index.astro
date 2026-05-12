@@ -1,10 +1,12 @@
 ---
 // server side code at build time
-// import icon 1
 import Square from './components/icon1.astro'
-// make second icon component, then import it
 import Circle from './components/icon2.astro'
+import Triangle from './components/icon3.astro'
+import Diamond from './components/icon4.astro'
+import Hexagon from './components/icon5.astro'
 
+import '../styles/icons.css'
 ---
 <html lang="en">
 	<head>
@@ -18,10 +20,13 @@ import Circle from './components/icon2.astro'
 	<body>
 
 		<!-- Load icons as separate components -->
-		 <Square />
-		 <Circle />
-
-
+		<div class="icon-grid">
+			<Square />
+			<Circle />
+			<Triangle />
+			<Diamond />
+			<Hexagon />
+		</div>
 
 	</body>
 </html>
