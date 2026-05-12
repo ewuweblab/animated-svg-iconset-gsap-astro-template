@@ -1,0 +1,27 @@
+---
+// server side code at build time
+// import icon 1
+import Square from './components/icon1.astro'
+// make second icon component, then import it
+import Circle from './components/icon2.astro'
+
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Animated SVG Icon Set</title>
+	</head>
+	<body>
+
+		<!-- Load icons as separate components -->
+		 <Square />
+		 <Circle />
+
+
+
+	</body>
+</html>
